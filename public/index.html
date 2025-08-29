@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>3D Chat — WhatsApp Style</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Modal to ask names -->
+  <div id="modal" class="modal">
+    <div class="modal-card">
+      <h2>Start chat</h2>
+      <input id="yourName" placeholder="Your name" />
+      <input id="theirName" placeholder="Friend's name" />
+      <div class="modal-actions">
+        <button id="startBtn">Start</button>
+      </div>
+      <p class="hint">Open this page in two windows and enter the same two names (any order) to connect.</p>
+    </div>
+  </div>
+
+  <div id="chat-container" class="hidden">
+    <div id="chat-header">
+      <div class="title">3D Chat</div>
+      <div class="sub">Private WebSocket demo</div>
+    </div>
+
+    <main id="chat-area" aria-live="polite"></main>
+
+    <!-- Footer status area (typing / recording) -->
+    <div id="status-footer" class="status-footer"></div>
+
+    <!-- Input area -->
+    <footer id="chat-footer">
+      <input id="text-input" type="text" placeholder="Type a message..." autocomplete="off" />
+      <button id="send-btn" title="Send">➤</button>
+      <button id="record-btn" title="Hold to record">🎤</button>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
